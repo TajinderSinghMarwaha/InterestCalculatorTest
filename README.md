@@ -22,7 +22,6 @@ npm test
 
 - Node.js v16 or higher
 - npm v7 or higher
-- Interest Calculator app running at: `http://localhost:63342/InterestCalculator/src/interestCalculator.html`
 
 ## 🏗️ Framework Architecture
 
