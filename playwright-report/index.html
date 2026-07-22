@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interest Calculator – Playwright Report</title>
+  <style>
+    :root { --bg:#0f172a; --card:#1e293b; --text:#e2e8f0; --muted:#94a3b8; --pass:#22c55e; --fail:#ef4444; --skip:#f59e0b; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--text); }
+    header.app { padding:24px 32px; border-bottom:1px solid #334155; }
+    h1 { margin:0 0 8px; font-size:1.5rem; }
+    .summary { display:flex; gap:16px; flex-wrap:wrap; margin-top:12px; }
+    .pill { background:var(--card); padding:10px 14px; border-radius:10px; min-width:110px; }
+    .pill strong { display:block; font-size:1.4rem; }
+    .pill.passed strong { color:var(--pass); }
+    .pill.failed strong { color:var(--fail); }
+    .pill.skipped strong { color:var(--skip); }
+    main { padding:24px 32px; display:grid; gap:16px; }
+    .scenario { background:var(--card); border-radius:12px; padding:16px 18px; border-left:4px solid #64748b; }
+    .scenario.passed { border-left-color:var(--pass); }
+    .scenario.failed { border-left-color:var(--fail); }
+    .scenario.skipped { border-left-color:var(--skip); }
+    .scenario h3 { margin:0 0 8px; }
+    .meta { display:flex; gap:12px; flex-wrap:wrap; color:var(--muted); font-size:0.9rem; align-items:center; }
+    .badge { text-transform:uppercase; font-size:0.7rem; letter-spacing:0.04em; padding:3px 8px; border-radius:999px; background:#334155; }
+    .badge.passed { background:rgba(34,197,94,.2); color:var(--pass); }
+    .badge.failed { background:rgba(239,68,68,.2); color:var(--fail); }
+    .badge.skipped { background:rgba(245,158,11,.2); color:var(--skip); }
+    ol.steps { margin:12px 0 0; padding-left:18px; }
+    .step { margin:6px 0; }
+    .step .badge { margin-right:6px; }
+    pre.error, pre.validation-msg { background:#0b1220; color:#fecaca; padding:10px; border-radius:8px; overflow:auto; white-space:pre-wrap; }
+    pre.validation-msg { color:#bbf7d0; border:1px solid #14532d; }
+    .validation { margin-top:12px; }
+    .attachment.image img { max-width:100%; border-radius:8px; margin-top:10px; border:1px solid #334155; }
+    .attachment.text { margin-top:8px; }
+    footer { padding:16px 32px 32px; color:var(--muted); font-size:0.85rem; }
+  </style>
+</head>
+<body>
+  <header class="app">
+    <h1>Interest Calculator – Test Report</h1>
+    <p>Generated from Cucumber JSON · open with <code>npm run playwright:report</code></p>
+    <div class="summary">
+      <div class="pill"><span>Total</span><strong>11</strong></div>
+      <div class="pill passed"><span>Passed</span><strong>11</strong></div>
+      <div class="pill failed"><span>Failed</span><strong>0</strong></div>
+      <div class="pill skipped"><span>Skipped</span><strong>0</strong></div>
+    </div>
+  </header>
+  <main>
+    
+        <section class="scenario passed">
+          <header>
+            <h3>Successful Login</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@LOGIN</span>
+              <span>7.66 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user is on the login page</li>
+<li class="step passed"><span class="badge">passed</span> When the user enters valid credentials and submits the login form</li>
+<li class="step passed"><span class="badge">passed</span> Then the user should be successfully authenticated</li>
+<li class="step passed"><span class="badge">passed</span> And the user should be redirected to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> After</li></ol>
+          
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Yearly Interest Calculation</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-01</span>
+              <span>6.18 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user enters a Principal Amount of 5000</li>
+<li class="step passed"><span class="badge">passed</span> And selects Interest rate of &quot;10%&quot;</li>
+<li class="step passed"><span class="badge">passed</span> And selects Duration &quot;Yearly&quot;</li>
+<li class="step passed"><span class="badge">passed</span> When the user clicks Calculate<div class="attachment text"><strong>When  attachment</strong><pre>Validation error [calculate]: Please tick this box if you want to proceed.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> Then the application computes Interest</li>
+<li class="step passed"><span class="badge">passed</span> And Total Amount = Principal Amount + Interest</li>
+<li class="step passed"><span class="badge">passed</span> And both values are rounded to two decimal places</li>
+<li class="step passed"><span class="badge">passed</span> And both values are displayed</li>
+<li class="step passed"><span class="badge">passed</span> After<div class="attachment text"><strong>After attachment</strong><pre>Validation error [dialog]: Please tick this box if you want to proceed.</pre></div></li></ol>
+          <div class="validation"><h4>Validation / log messages</h4><pre class="validation-msg">Validation error [calculate]: Please tick this box if you want to proceed.</pre><pre class="validation-msg">Validation error [dialog]: Please tick this box if you want to proceed.</pre></div>
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Monthly Interest Calculation</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-02</span>
+              <span>6.25 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user enters a Principal Amount of 5000</li>
+<li class="step passed"><span class="badge">passed</span> And selects Interest rate of &quot;10%&quot;</li>
+<li class="step passed"><span class="badge">passed</span> And selects Duration &quot;Monthly&quot;</li>
+<li class="step passed"><span class="badge">passed</span> When the user clicks Calculate<div class="attachment text"><strong>When  attachment</strong><pre>Validation error [calculate]: Please tick this box if you want to proceed.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> Then the application computes Interest</li>
+<li class="step passed"><span class="badge">passed</span> And Total Amount = Principal Amount + Interest</li>
+<li class="step passed"><span class="badge">passed</span> And both values are rounded to two decimal places</li>
+<li class="step passed"><span class="badge">passed</span> And both values are displayed</li>
+<li class="step passed"><span class="badge">passed</span> After<div class="attachment text"><strong>After attachment</strong><pre>Validation error [dialog]: Please tick this box if you want to proceed.</pre></div></li></ol>
+          <div class="validation"><h4>Validation / log messages</h4><pre class="validation-msg">Validation error [calculate]: Please tick this box if you want to proceed.</pre><pre class="validation-msg">Validation error [dialog]: Please tick this box if you want to proceed.</pre></div>
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Daily Interest Calculation</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-03</span>
+              <span>6.25 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user enters a Principal Amount of 5000</li>
+<li class="step passed"><span class="badge">passed</span> And selects Interest rate of &quot;10%&quot;</li>
+<li class="step passed"><span class="badge">passed</span> And selects Duration &quot;Daily&quot;</li>
+<li class="step passed"><span class="badge">passed</span> When the user clicks Calculate<div class="attachment text"><strong>When  attachment</strong><pre>Validation error [calculate]: Please tick this box if you want to proceed.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> Then the application computes Interest</li>
+<li class="step passed"><span class="badge">passed</span> And Total Amount = Principal Amount + Interest</li>
+<li class="step passed"><span class="badge">passed</span> And both values are rounded to two decimal places</li>
+<li class="step passed"><span class="badge">passed</span> And both values are displayed</li>
+<li class="step passed"><span class="badge">passed</span> After<div class="attachment text"><strong>After attachment</strong><pre>Validation error [dialog]: Please tick this box if you want to proceed.</pre></div></li></ol>
+          <div class="validation"><h4>Validation / log messages</h4><pre class="validation-msg">Validation error [calculate]: Please tick this box if you want to proceed.</pre><pre class="validation-msg">Validation error [dialog]: Please tick this box if you want to proceed.</pre></div>
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Correct Rounding to Two Decimals</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-04</span>
+              <span>6.48 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user enters a Principal Amount of 1000</li>
+<li class="step passed"><span class="badge">passed</span> And selects Interest rate of &quot;7%&quot;</li>
+<li class="step passed"><span class="badge">passed</span> And selects Duration &quot;Daily&quot;</li>
+<li class="step passed"><span class="badge">passed</span> When the user clicks Calculate<div class="attachment text"><strong>When  attachment</strong><pre>Validation error [calculate]: Please tick this box if you want to proceed.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> Then the application computes Interest</li>
+<li class="step passed"><span class="badge">passed</span> And Interest and Total Amount are rounded (not truncated) to two decimal places using standard rounding rules</li>
+<li class="step passed"><span class="badge">passed</span> After<div class="attachment text"><strong>After attachment</strong><pre>Validation error [dialog]: Please tick this box if you want to proceed.</pre></div></li></ol>
+          <div class="validation"><h4>Validation / log messages</h4><pre class="validation-msg">Validation error [calculate]: Please tick this box if you want to proceed.</pre><pre class="validation-msg">Validation error [dialog]: Please tick this box if you want to proceed.</pre></div>
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Interest Rate Options Limited to 15 Percent</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-05</span>
+              <span>4.76 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user opens the interest rate dropdown</li>
+<li class="step passed"><span class="badge">passed</span> Then the list contains predefined rates in percentage values from greater than 0 up to and including 15%</li>
+<li class="step passed"><span class="badge">passed</span> And no option exceeds 15%</li>
+<li class="step passed"><span class="badge">passed</span> And the calculator accepts 15% as a valid selection</li>
+<li class="step passed"><span class="badge">passed</span> After</li></ol>
+          
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>All Fields Required</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-06</span>
+              <span>6.15 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user tries to calculate without completing all mandatory inputs</li>
+<li class="step passed"><span class="badge">passed</span> When the user clicks Calculate<div class="attachment text"><strong>When  attachment</strong><pre>Validation error [calculate]: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> Then the calculation is blocked<div class="attachment text"><strong>Then  attachment</strong><pre>Validation error [blocked]: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> And an inline error message is displayed for each missing field<div class="attachment text"><strong>And  attachment</strong><pre>Validation errors:
+- rate: Please fill in all fields.
+- duration: Please fill in all fields.
+- consent: Please fill in all fields.
+- dialog: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> After<div class="attachment text"><strong>After attachment</strong><pre>Validation error [dialog]: Please fill in all fields.</pre></div></li></ol>
+          <div class="validation"><h4>Validation / log messages</h4><pre class="validation-msg">Validation error [calculate]: Please fill in all fields.</pre><pre class="validation-msg">Validation error [blocked]: Please fill in all fields.</pre><pre class="validation-msg">Validation errors:
+- rate: Please fill in all fields.
+- duration: Please fill in all fields.
+- consent: Please fill in all fields.
+- dialog: Please fill in all fields.</pre><pre class="validation-msg">Validation error [dialog]: Please fill in all fields.</pre></div>
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Principal Amount Validation</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-07</span>
+              <span>4.65 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Then slider should allow to select any value upto 15000</li>
+<li class="step passed"><span class="badge">passed</span> And no option exceeds 15000</li>
+<li class="step passed"><span class="badge">passed</span> And the calculator accepts 15000 as a valid selection</li>
+<li class="step passed"><span class="badge">passed</span> After</li></ol>
+          
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Interest Rate Not Selected</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-08</span>
+              <span>7.18 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user did not choose an interest rate from the dropdown</li>
+<li class="step passed"><span class="badge">passed</span> When the user clicks Calculate<div class="attachment text"><strong>When  attachment</strong><pre>Validation error [calculate]: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> Then show an error<div class="attachment text"><strong>Then  attachment</strong><pre>Validation error [validation]: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> And prevent calculation<div class="attachment text"><strong>And  attachment</strong><pre>Validation error [prevented]: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> After<div class="attachment text"><strong>After attachment</strong><pre>Validation error [dialog]: Please fill in all fields.</pre></div></li></ol>
+          <div class="validation"><h4>Validation / log messages</h4><pre class="validation-msg">Validation error [calculate]: Please fill in all fields.</pre><pre class="validation-msg">Validation error [validation]: Please fill in all fields.</pre><pre class="validation-msg">Validation error [prevented]: Please fill in all fields.</pre><pre class="validation-msg">Validation error [dialog]: Please fill in all fields.</pre></div>
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Duration Not Selected</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-09</span>
+              <span>7.30 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the user did not choose a duration (Daily/Monthly/Yearly)</li>
+<li class="step passed"><span class="badge">passed</span> When the user clicks Calculate<div class="attachment text"><strong>When  attachment</strong><pre>Validation error [calculate]: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> Then show an error<div class="attachment text"><strong>Then  attachment</strong><pre>Validation error [validation]: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> And prevent calculation<div class="attachment text"><strong>And  attachment</strong><pre>Validation error [prevented]: Please fill in all fields.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> After<div class="attachment text"><strong>After attachment</strong><pre>Validation error [dialog]: Please fill in all fields.</pre></div></li></ol>
+          <div class="validation"><h4>Validation / log messages</h4><pre class="validation-msg">Validation error [calculate]: Please fill in all fields.</pre><pre class="validation-msg">Validation error [validation]: Please fill in all fields.</pre><pre class="validation-msg">Validation error [prevented]: Please fill in all fields.</pre><pre class="validation-msg">Validation error [dialog]: Please fill in all fields.</pre></div>
+          
+        </section>
+      
+
+        <section class="scenario passed">
+          <header>
+            <h3>Consent Required</h3>
+            <div class="meta">
+              <span class="badge passed">passed</span>
+              <span>Interest Calculator Application</span>
+              <span>@AC-10</span>
+              <span>7.70 s</span>
+            </div>
+          </header>
+          <ol class="steps"><li class="step passed"><span class="badge">passed</span> Before</li>
+<li class="step passed"><span class="badge">passed</span> Given the user navigates to the Interest Calculator application</li>
+<li class="step passed"><span class="badge">passed</span> And the user logs in with valid credentials</li>
+<li class="step passed"><span class="badge">passed</span> Given the consent checkbox is not checked</li>
+<li class="step passed"><span class="badge">passed</span> When the user clicks Calculate<div class="attachment text"><strong>When  attachment</strong><pre>Validation error [calculate]: Please tick this box if you want to proceed.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> Then show an error<div class="attachment text"><strong>Then  attachment</strong><pre>Validation error [validation]: Please tick this box if you want to proceed.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> And prevent calculation<div class="attachment text"><strong>And  attachment</strong><pre>Validation error [prevented]: Please tick this box if you want to proceed.</pre></div></li>
+<li class="step passed"><span class="badge">passed</span> After<div class="attachment text"><strong>After attachment</strong><pre>Validation error [dialog]: Please tick this box if you want to proceed.</pre></div></li></ol>
+          <div class="validation"><h4>Validation / log messages</h4><pre class="validation-msg">Validation error [calculate]: Please tick this box if you want to proceed.</pre><pre class="validation-msg">Validation error [validation]: Please tick this box if you want to proceed.</pre><pre class="validation-msg">Validation error [prevented]: Please tick this box if you want to proceed.</pre><pre class="validation-msg">Validation error [dialog]: Please tick this box if you want to proceed.</pre></div>
+          
+        </section>
+      
+  </main>
+  <footer>Report generated at 2026-07-22T17:57:21.499Z</footer>
+</body>
+</html>
