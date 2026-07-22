@@ -1,0 +1,37 @@
+{
+  "name": "interest-calculator-automation",
+  "version": "1.0.0",
+  "description": "Playwright BDD automation framework for Interest Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx @cucumber/cucumber && npm run report:generate",
+    "test:headed": "npx @cucumber/cucumber --format progress-bar --publish-quiet && npm run report:generate",
+    "test:debug": "npx @cucumber/cucumber --publish-quiet && npm run report:generate",
+    "test:tag": "npx @cucumber/cucumber --tags",
+    "test:chromium": "BROWSER=chromium npx @cucumber/cucumber && npm run report:generate",
+    "test:firefox": "BROWSER=firefox npx @cucumber/cucumber && npm run report:generate",
+    "test:webkit": "BROWSER=webkit npx @cucumber/cucumber && npm run report:generate",
+    "test:all-browsers": "npm run test:chromium && npm run test:firefox && npm run test:webkit",
+    "report:generate": "node scripts/generate-playwright-report.mjs",
+    "playwright:report": "npm run report:generate && npx playwright show-report playwright-report",
+    "report:cucumber": "open reports/cucumber-report.html",
+    "playwright:install": "npx playwright install",
+    "playwright:codegen": "npx playwright codegen http://3.8.242.61/Account/Login"
+  },
+  "keywords": [
+    "playwright",
+    "cucumber",
+    "bdd",
+    "automation",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^9.5.1",
+    "@playwright/test": "^1.40.1",
+    "@types/node": "^20.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
