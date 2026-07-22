@@ -238,11 +238,10 @@ Tests UI validation and constraints:
 
 ## 📊 Test Reports
 
-For issues found during testing, execution steps, coverage, and limitations, see:
-
-**[TEST_EXECUTION_AND_FINDINGS.md](./TEST_EXECUTION_AND_FINDINGS.md)**
-
 Tests run through Cucumber + Playwright. After `npm test`, reports are written automatically.
+
+<img width="633" height="196" alt="Screenshot 2026-07-22 at 20 01 34" src="https://github.com/user-attachments/assets/da5d5a4b-1282-4672-ab96-516a40aa8e35" />
+
 
 ### Generated artefacts
 
