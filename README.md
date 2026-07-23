@@ -22,9 +22,7 @@ npm test
 
 - Node.js v16 or higher
 - npm v7 or higher
-- - Registered app credentials should be placed/updated in playwright config file [playwright.config.ts] for:
-  testEmail
-  testPassword
+- Registered credentials for app should be updated in playwright config file [playwright.config.ts] for variables testEmail and testPassword
 
 ## 🏗️ Framework Architecture
 
